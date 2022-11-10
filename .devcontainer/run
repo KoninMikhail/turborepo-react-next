@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+set -e
+
+DC="docker-compose -f .devcontainer/docker-compose.yml -p supereffective-assets"
+
+if [[ "${1}" == "up" ]]; then
+    ${DC} up -d app
+    exit 0
+fi
+
+if [[ "${1}" == "down" || "${1}" == "stop" ]]; then
+    ${DC} down --remove-orphans
+    exit 0
+fi
+
+${DC} run --rm app "${@}"

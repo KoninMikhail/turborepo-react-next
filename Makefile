@@ -1,15 +1,15 @@
-DC=docker-compose -f .devcontainer/docker-compose.yml -p supereffective-assets
+DCR=.devcontainer/run
 
 dev:
-	${DC} up app -d
+	${DCR} up
 	make open
 
 install:
-	${DC} run --rm app yarn install
+	${DCR} yarn install
 
 open:
 	open http://localhost:4000
 
 sh: bash
 bash:
-	${DC} run --rm app bash
+	${DCR} bash
