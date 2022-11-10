@@ -3,9 +3,12 @@
   "version": "0.0.0",
   "main": "./index.tsx",
   "types": "./index.tsx",
+  "module": "./dist/index.mjs",
   "license": "MIT",
   "scripts": {
-    "lint": "TIMING=1 eslint \"**/*.ts*\""
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "build": "tsup index.tsx --format=esm,cjs --dts --external react",
+    "dev": "tsup index.tsx --format=esm,cjs --watch --dts --external react"
   },
   "devDependencies": {
     "@types/react": "^17.0.37",
@@ -14,6 +17,7 @@
     "eslint-config-custom": "*",
     "react": "^18.2.0",
     "tsconfig": "*",
+    "tsup": "^6.4.0",
     "typescript": "^4.5.2"
   }
 }
