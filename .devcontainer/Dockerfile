@@ -47,7 +47,8 @@ RUN npm install npm@latest -g && \
 
 # Enable Yarn
 RUN corepack enable && \
-    corepack prepare yarn@stable --activate
+    corepack prepare yarn@stable --activate && \
+    yarn config set --home enableTelemetry 0
 
 WORKDIR /usr/src/app
 EXPOSE 3000
