@@ -1,0 +1,7 @@
+node_modules
+.yarn
+.next/
+out/
+build
+.turbo
+.idea
