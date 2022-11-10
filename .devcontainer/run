@@ -13,4 +13,16 @@ if [[ "${1}" == "down" || "${1}" == "stop" ]]; then
     exit 0
 fi
 
+if [[ "${1}" == "build" ]]; then
+    ${DC} build
+    exit 0
+fi
+
+if [[ "${1}" == "recreate" ]]; then
+    ${DC} down --remove-orphans
+    ${DC} build
+    ${DC} up -d app
+    exit 0
+fi
+
 ${DC} run --rm app "${@}"

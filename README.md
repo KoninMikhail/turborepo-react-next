@@ -2,8 +2,6 @@
 
 This is an official Yarn (Berry) starter turborepo.
 
-Created using `create-turbo ./ --use-yarn`.
-
 ## What's inside?
 
 This turborepo uses [Yarn](https://yarnpkg.com/) as a package manager. It includes the following packages/apps:

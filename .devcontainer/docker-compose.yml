@@ -24,7 +24,7 @@ services:
     command: ["yarn", "run", "dev"]
     ports:
       - "4000:3000"
-      - "4001:3001"
+      - "6006:6006"
     volumes:
       - "../:/usr/src/app"
       - "yarn_cache:/root/.cache/yarn"

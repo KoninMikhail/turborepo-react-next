@@ -1,7 +1,12 @@
 FROM node:18-bullseye as base
 
 ENV DEBIAN_FRONTEND noninteractive
+
 ENV NEXT_TELEMETRY_DISABLED 1
+ENV STORYBOOK_DISABLE_TELEMETRY 1
+
+ENV NODE_OPTIONS "--openssl-legacy-provider"
+
 ENV HOME /root
 ENV YARN_CACHE_FOLDER /root/.cache/yarn
 ENV GIT_USER_NAME "Javi Aguilar"
@@ -52,4 +57,4 @@ RUN corepack enable && \
 
 WORKDIR /usr/src/app
 EXPOSE 3000
-EXPOSE 3001
+EXPOSE 6006
