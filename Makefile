@@ -9,7 +9,6 @@ install:
 
 open:
 	open http://localhost:4000
-	open http://localhost:4001
 
 sh: bash
 bash:
