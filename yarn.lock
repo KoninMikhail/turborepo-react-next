@@ -3800,6 +3800,25 @@ __metadata:
   languageName: node
   linkType: hard
 
+"admin@workspace:apps/admin":
+  version: 0.0.0-use.local
+  resolution: "admin@workspace:apps/admin"
+  dependencies:
+    "@babel/core": ^7.20.2
+    "@types/node": ^18.11.9
+    "@types/react": ^18.0.25
+    "@types/react-dom": ^18.0.8
+    eslint: 8.27.0
+    eslint-config-custom: "workspace:^"
+    next: 13.0.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    tsconfig: "workspace:^"
+    typescript: 4.8.4
+    ui: "workspace:^"
+  languageName: unknown
+  linkType: soft
+
 "agent-base@npm:5":
   version: 5.1.1
   resolution: "agent-base@npm:5.1.1"
@@ -4899,25 +4918,6 @@ __metadata:
   checksum: 30befca8019b2eb7dbad38cff6266cf543091dae2825c856a62a8ccf2c3ab9c2907c4d12b288b73101196767f66812365400a227581484a05f968b0307cfaf12
   languageName: node
   linkType: hard
-
-"cms@workspace:apps/cms":
-  version: 0.0.0-use.local
-  resolution: "cms@workspace:apps/cms"
-  dependencies:
-    "@babel/core": ^7.20.2
-    "@types/node": ^18.11.9
-    "@types/react": ^18.0.25
-    "@types/react-dom": ^18.0.8
-    eslint: 8.27.0
-    eslint-config-custom: "workspace:^"
-    next: 13.0.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    tsconfig: "workspace:^"
-    typescript: 4.8.4
-    ui: "workspace:^"
-  languageName: unknown
-  linkType: soft
 
 "collection-visit@npm:^1.0.0":
   version: 1.0.0
