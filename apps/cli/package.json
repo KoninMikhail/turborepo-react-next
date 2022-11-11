@@ -9,9 +9,11 @@
     "commander": "^9.4.1"
   },
   "scripts": {
+    "dev": "rm -rf dist && tsup index.ts --format=esm --watch --dts --external react",
     "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "lint:ci": "yarn run lint",
     "build": "rm -rf dist && tsup index.ts --format=esm --dts --external react",
-    "dev": "rm -rf dist && tsup index.ts --format=esm --watch --dts --external react"
+    "build:ci": "yarn run build"
   },
   "bin": {
     "app-cli": "./dist/index.mjs"

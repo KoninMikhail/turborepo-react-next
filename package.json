@@ -8,12 +8,14 @@
   ],
   "scripts": {
     "prepare": "husky install",
-    "build": "turbo run build",
     "dev": "turbo run dev --no-cache --parallel --continue",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md,mdx}\"",
+    "build": "turbo run build",
+    "build:ci": "turbo run build:ci",
     "test": "turbo run test --concurrency=1",
     "test:ci": "turbo run test:ci --concurrency=1",
     "lint": "turbo run lint",
-    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,css,scss,md,mdx}\""
+    "lint:ci": "yarn run lint"
   },
   "devDependencies": {
     "@packages/config": "workspace:^",

@@ -5,6 +5,7 @@
   "scripts": {
     "dev": "CI=1 sb dev --ci -p 6006",
     "build": "CI=1 sb build --docs",
+    "build:ci": "echo 'noop'",
     "preview-storybook": "serve storybook-static",
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },

@@ -7,9 +7,11 @@
   "module": "./dist/index.mjs",
   "license": "MIT",
   "scripts": {
-    "lint": "TIMING=1 eslint \"**/*.ts*\"",
-    "build": "tsup index.tsx --format=esm,cjs --dts --external react",
     "dev": "tsup index.tsx --format=esm,cjs --watch --dts --external react",
+    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "lint:ci": "yarn run lint",
+    "build": "tsup index.tsx --format=esm,cjs --dts --external react",
+    "build:ci": "yarn run build",
     "test": "jest --verbose --coverage --coverageDirectory=.coverage",
     "test:ci": "jest --runInBand --ci --coverage --coverageDirectory=.coverage"
   },
