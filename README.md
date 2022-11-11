@@ -1,5 +1,7 @@
 # Turborepo Starter
 
+![Build Status](https://github.com/itsjavi/turborepo-starter/actions/workflows/CI.yml/badge.svg?branch=main)
+
 Opinionated Turborepo template repository, based on the official Yarn (Berry) starter turborepo,
 created with testing, design systems, DDD and reactive programming in mind.
 
