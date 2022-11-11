@@ -22,4 +22,4 @@ if [[ "${1}" == "cli" ]]; then
     exit 0
 fi
 
-${DC} run --rm app "${@}"
+${DC} run --rm "${@}"

@@ -1,5 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-.devcontainer/run yarn format
-.devcontainer/run yarn test
+.devcontainer/run -T app yarn format
+.devcontainer/run -T app yarn test

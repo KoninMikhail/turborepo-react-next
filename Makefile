@@ -9,7 +9,7 @@ stop:
 	${DCR} stop
 
 install:
-	${DCR} yarn install
+	${DCR} app yarn install
 
 open:
 	open http://localhost:4000
@@ -17,4 +17,4 @@ open:
 
 sh: bash
 bash:
-	${DCR} bash
+	${DCR} app bash
