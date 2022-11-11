@@ -1,9 +1,15 @@
-public/**/* linguist-detectable=false
-data/**/* linguist-generated=true
-.storybook/**/*.js linguist-detectable=false
-*.html linguist-detectable=false
-*.config.js linguist-detectable=false
-*.setup.js linguist-detectable=false
-*.sh linguist-detectable=false
-Dockerfile linguist-detectable=false
-Makefile linguist-detectable=false
+# config files (they will be ignored in language stats)
+*.js linguist-documentation
+*.ts linguist-documentation
+.devcontainer/** linguist-documentation
+**/*.config.js linguist-documentation
+**/*.setup.js linguist-documentation
+**/*rc.js linguist-documentation
+Dockerfile linguist-documentation
+Makefile linguist-documentation
+**/.storybook/* linguist-documentation
+.husky/** linguist-documentation
+
+public/**/* linguist-documentation
+data/**/* linguist-documentation
+
