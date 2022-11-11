@@ -1,6 +1,19 @@
-# Turborepo starter
+# Turborepo Starter
 
-This is an official Yarn (Berry) starter turborepo.
+Opinionated Turborepo template repository, based on the official Yarn (Berry) starter turborepo.
+
+Main tools, frameworks and libraries: Turbo, Yarn, TypeScript, ReactJS, NextJS, ESLint, Prettier, Jest, Storybook, Styled Components, tsup.
+
+## Software Patterns and Principles
+
+The project is a monorepo that comes with a series of examples that follow these software design patterns:
+
+- Reactive programming / Reactive UI using the observer pattern, which allows us to decouple the business logic and the state from the framework and UI components. Easier to test and more scalable.
+- Atomic Design
+- Domain-Driven Design (DDD) rather than framework-oriented separation of concerns.
+- Clean/Onion architecture. The main applications have a series of layers separating Business Logic (Domain and Use Cases), Entry Points (aka. presentation layer), Infrastructure (providers, interface implementations, vendor extensions, etc.) and Configuration (which wraps everything together).
+
+This project does not feature Micro Frontends / Module Federation, but it can be easily implemented.
 
 ## What's inside?
 
@@ -8,13 +21,15 @@ This turborepo uses [Yarn](https://yarnpkg.com/) as a package manager. It includ
 
 ### Apps and Packages
 
-- `docs`: a [Next.js](https://nextjs.org/) app
-- `web`: another [Next.js](https://nextjs.org/) app
-- `ui`: a stub React component library shared by both `web` and `docs` applications
-- `eslint-config-custom`: `eslint` configurations (includes `eslint-config-next` and `eslint-config-prettier`)
-- `tsconfig`: `tsconfig.json`s used throughout the monorepo
+- `apps/web`: a [Next.js](https://nextjs.org/) v13 app
+- `apps/cli`: a [NodeJS](https://nodejs.org/) CLI app, written in TypeScript, with Chalk and Commander
+- `apps/storybook`: a [StoryBook](https://storybook.js.org/) design system app (v7 alpha), powered by Vite 3
+- `packages/ui`: a stub React v18 component library shared by both `web` and `storybook` applications, powered by `styled-components` and `tsup` (a `esbundle` based compiler).
+- `packages/config`: Shared configurations, including:
+  - `eslint` configurations (includes `eslint-config-next`, `eslint-config-turbo` and `eslint-config-prettier`)
+  - `tsconfig` TS config JSONs used throughout the monorepo
 
-Each package/app is 100% [TypeScript](https://www.typescriptlang.org/).
+Except for some config files, each package or app is 100% [TypeScript](https://www.typescriptlang.org/).
 
 ### Utilities
 
@@ -23,6 +38,7 @@ This turborepo has some additional tools already setup for you:
 - [TypeScript](https://www.typescriptlang.org/) for static type checking
 - [ESLint](https://eslint.org/) for code linting
 - [Prettier](https://prettier.io) for code formatting
+- [Jest](https://jestjs.io) for testing
 
 ### Build
 
@@ -41,6 +57,12 @@ To develop all apps and packages, run the following command:
 cd my-turborepo
 yarn run dev
 ```
+
+#### .devcontainer
+
+The `.devcontainer` folder offers a local Docker development environment for VS Code with the [Dev Containers](https://containers.dev/) extension, but you can also use it with other IDEs, via a command line, and the `.devcontainer/run` helper script, which wraps `docker-compose` commands.
+
+You can also use `make` for simple tasks like: `dev`, `stop`, `install`, `open`, and `bash` inside the container.
 
 ### Remote Caching
 
