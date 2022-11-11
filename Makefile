@@ -1,8 +1,11 @@
 DCR=.devcontainer/run
 
 dev:
-	${DCR} up
+	${DCR} up -d app
 	make open
+
+stop:
+	${DCR} stop
 
 install:
 	${DCR} yarn install

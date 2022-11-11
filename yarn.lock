@@ -15,6 +15,62 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@app/cli@workspace:apps/cli":
+  version: 0.0.0-use.local
+  resolution: "@app/cli@workspace:apps/cli"
+  dependencies:
+    "@packages/config": "workspace:^"
+    "@types/node": ^18.11.9
+    chalk: ^5.1.2
+    commander: ^9.4.1
+    tsup: 6.4.0
+    typescript: 4.8.4
+  bin:
+    supereffective-cli: ./dist/index.mjs
+  languageName: unknown
+  linkType: soft
+
+"@app/storybook@workspace:apps/storybook":
+  version: 0.0.0-use.local
+  resolution: "@app/storybook@workspace:apps/storybook"
+  dependencies:
+    "@packages/config": "workspace:^"
+    "@packages/ui": "workspace:^"
+    "@storybook/addon-actions": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/addon-docs": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/addon-essentials": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/addon-interactions": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/addon-links": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/builder-vite": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/cli": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/react-vite": ">=7.0.0-alpha.48 <7.1.0"
+    "@storybook/testing-library": ">=0.0.14-next <0.1.0"
+    "@vitejs/plugin-react": 2.2.0
+    react: ^18.0.0
+    react-dom: ^18.0.0
+    serve: ^14.1.1
+    typescript: 4.8.4
+    vite: 3.2.3
+  languageName: unknown
+  linkType: soft
+
+"@app/web@workspace:apps/web":
+  version: 0.0.0-use.local
+  resolution: "@app/web@workspace:apps/web"
+  dependencies:
+    "@babel/core": ^7.20.2
+    "@packages/config": "workspace:^"
+    "@packages/ui": "workspace:^"
+    "@types/node": ^18.11.9
+    "@types/react": ^18.0.25
+    "@types/react-dom": ^18.0.8
+    next: 13.0.2
+    react: ^18.2.0
+    react-dom: ^18.2.0
+    typescript: 4.8.4
+  languageName: unknown
+  linkType: soft
+
 "@aw-web-design/x-default-browser@npm:1.4.88":
   version: 1.4.88
   resolution: "@aw-web-design/x-default-browser@npm:1.4.88"
@@ -1957,6 +2013,32 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@packages/config@workspace:^, @packages/config@workspace:packages/config":
+  version: 0.0.0-use.local
+  resolution: "@packages/config@workspace:packages/config"
+  dependencies:
+    eslint: 8.27.0
+    eslint-config-next: 13.0.2
+    eslint-config-prettier: 8.5.0
+    eslint-config-turbo: latest
+    eslint-plugin-react: 7.31.10
+    typescript: 4.8.4
+  languageName: unknown
+  linkType: soft
+
+"@packages/ui@workspace:^, @packages/ui@workspace:packages/ui":
+  version: 0.0.0-use.local
+  resolution: "@packages/ui@workspace:packages/ui"
+  dependencies:
+    "@packages/config": "workspace:^"
+    "@types/react": 18.0.25
+    "@types/react-dom": 18.0.8
+    react: 18.2.0
+    tsup: 6.4.0
+    typescript: 4.8.4
+  languageName: unknown
+  linkType: soft
+
 "@pnpm/network.ca-file@npm:^1.0.1":
   version: 1.0.1
   resolution: "@pnpm/network.ca-file@npm:1.0.1"
@@ -3800,25 +3882,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"admin@workspace:apps/admin":
-  version: 0.0.0-use.local
-  resolution: "admin@workspace:apps/admin"
-  dependencies:
-    "@babel/core": ^7.20.2
-    "@types/node": ^18.11.9
-    "@types/react": ^18.0.25
-    "@types/react-dom": ^18.0.8
-    eslint: 8.27.0
-    eslint-config-custom: "workspace:^"
-    next: 13.0.2
-    react: ^18.2.0
-    react-dom: ^18.2.0
-    tsconfig: "workspace:^"
-    typescript: 4.8.4
-    ui: "workspace:^"
-  languageName: unknown
-  linkType: soft
-
 "agent-base@npm:5":
   version: 5.1.1
   resolution: "agent-base@npm:5.1.1"
@@ -3984,9 +4047,10 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "app@workspace:."
   dependencies:
-    eslint-config-custom: "*"
-    prettier: latest
-    turbo: latest
+    "@packages/config": "workspace:^"
+    eslint: ^8.27.0
+    prettier: ^2.7.1
+    turbo: ^1.6.3
   languageName: unknown
   linkType: soft
 
@@ -4847,23 +4911,6 @@ __metadata:
   checksum: 09897f68467973f827c04e7eaadf13b55f8aec49ecd6647cc276386ea660059322e2dd8020a8b6b84d422dbdd619597046fa89cbbbdc95b2cea149a2df7c096c
   languageName: node
   linkType: hard
-
-"cli@workspace:apps/cli":
-  version: 0.0.0-use.local
-  resolution: "cli@workspace:apps/cli"
-  dependencies:
-    "@types/node": ^18.11.9
-    chalk: ^5.1.2
-    commander: ^9.4.1
-    eslint: 8.27.0
-    eslint-config-custom: "workspace:^"
-    tsconfig: "workspace:^"
-    tsup: 6.4.0
-    typescript: 4.8.4
-  bin:
-    supereffective-cli: ./dist/index.mjs
-  languageName: unknown
-  linkType: soft
 
 "client-only@npm:0.0.1":
   version: 0.0.1
@@ -6229,19 +6276,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-custom@*, eslint-config-custom@workspace:^, eslint-config-custom@workspace:packages/eslint-config-custom":
-  version: 0.0.0-use.local
-  resolution: "eslint-config-custom@workspace:packages/eslint-config-custom"
-  dependencies:
-    eslint: 8.27.0
-    eslint-config-next: 13.0.2
-    eslint-config-prettier: 8.5.0
-    eslint-config-turbo: latest
-    eslint-plugin-react: 7.31.10
-    typescript: 4.8.4
-  languageName: unknown
-  linkType: soft
-
 "eslint-config-next@npm:13.0.2":
   version: 13.0.2
   resolution: "eslint-config-next@npm:13.0.2"
@@ -6448,7 +6482,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.27.0":
+"eslint@npm:8.27.0, eslint@npm:^8.27.0":
   version: 8.27.0
   resolution: "eslint@npm:8.27.0"
   dependencies:
@@ -10690,7 +10724,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prettier@npm:>=2.2.1 <=3.0.0, prettier@npm:latest":
+"prettier@npm:>=2.2.1 <=3.0.0, prettier@npm:^2.7.1":
   version: 2.7.1
   resolution: "prettier@npm:2.7.1"
   bin:
@@ -12105,31 +12139,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"storybook@workspace:apps/storybook":
-  version: 0.0.0-use.local
-  resolution: "storybook@workspace:apps/storybook"
-  dependencies:
-    "@storybook/addon-actions": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/addon-docs": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/addon-essentials": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/addon-interactions": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/addon-links": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/builder-vite": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/cli": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/react-vite": ">=7.0.0-alpha.48 <7.1.0"
-    "@storybook/testing-library": ">=0.0.14-next <0.1.0"
-    "@vitejs/plugin-react": 2.2.0
-    eslint-config-custom: "workspace:^"
-    react: ^18.0.0
-    react-dom: ^18.0.0
-    serve: ^14.1.1
-    tsconfig: "workspace:^"
-    typescript: 4.8.4
-    ui: "workspace:^"
-    vite: 3.2.3
-  languageName: unknown
-  linkType: soft
-
 "string-width@npm:^1.0.2 || 2 || 3 || 4, string-width@npm:^4.0.0, string-width@npm:^4.1.0, string-width@npm:^4.2.0, string-width@npm:^4.2.2, string-width@npm:^4.2.3":
   version: 4.2.3
   resolution: "string-width@npm:4.2.3"
@@ -12555,12 +12564,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsconfig@workspace:^, tsconfig@workspace:packages/tsconfig":
-  version: 0.0.0-use.local
-  resolution: "tsconfig@workspace:packages/tsconfig"
-  languageName: unknown
-  linkType: soft
-
 "tslib@npm:^1.8.1, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
@@ -12664,7 +12667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"turbo@npm:latest":
+"turbo@npm:^1.6.3":
   version: 1.6.3
   resolution: "turbo@npm:1.6.3"
   dependencies:
@@ -12800,21 +12803,6 @@ __metadata:
   checksum: 7b3897df38b6fc7d7d9f4dcd658599d81aa2b1fb0d074829dd4e5290f7318dbca1f4af2f45acb833b95b1fe0ed4698662ab61b87e94328eb4c0a0d3435baf924
   languageName: node
   linkType: hard
-
-"ui@workspace:^, ui@workspace:packages/ui":
-  version: 0.0.0-use.local
-  resolution: "ui@workspace:packages/ui"
-  dependencies:
-    "@types/react": 18.0.25
-    "@types/react-dom": 18.0.8
-    eslint: 8.27.0
-    eslint-config-custom: "workspace:^"
-    react: 18.2.0
-    tsconfig: "workspace:^"
-    tsup: 6.4.0
-    typescript: 4.8.4
-  languageName: unknown
-  linkType: soft
 
 "unbox-primitive@npm:^1.0.2":
   version: 1.0.2

@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
-# dev
-dev.md
-DEV.md
+# developer notes
+/dev.md
+/DEV.md
 
 # dependencies
 node_modules

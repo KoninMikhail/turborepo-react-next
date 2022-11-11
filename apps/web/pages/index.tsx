@@ -1,9 +1,9 @@
-import { Button } from "ui"
+import { Button } from "@packages/ui"
 
 export default function Web() {
   return (
     <div>
-      <h1>Admin App</h1>
+      <h1>Web App</h1>
       <Button />
     </div>
   )

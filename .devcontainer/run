@@ -3,18 +3,8 @@ set -e
 
 DC="docker-compose -f .devcontainer/docker-compose.yml -p supereffective-assets"
 
-if [[ "${1}" == "up" ]]; then
-    ${DC} up -d app
-    exit 0
-fi
-
-if [[ "${1}" == "down" || "${1}" == "stop" ]]; then
-    ${DC} down --remove-orphans
-    exit 0
-fi
-
-if [[ "${1}" == "build" ]]; then
-    ${DC} build
+if [[ "${1}" == "build" || "${1}" == "up" || "${1}" == "stop" || "${1}" == "down" || "${1}" == "restart" || "${1}" == "run" || "${1}" == "exec" ]]; then
+    ${DC} "${@}"
     exit 0
 fi
 

@@ -22,7 +22,7 @@ module.exports = {
     return {
       ...config,
       resolve: {
-        alias: [resolve_module("ui", "packages/ui")],
+        alias: [resolve_module("@packages/ui", "packages/ui")],
       },
     }
   },

@@ -1,5 +1,5 @@
 {
-  "name": "storybook",
+  "name": "@app/storybook",
   "version": "0.0.0",
   "private": true,
   "scripts": {
@@ -9,11 +9,12 @@
     "clean": "rm -rf .turbo && rm -rf node_modules"
   },
   "dependencies": {
+    "@packages/ui": "workspace:^",
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "ui": "workspace:^"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
+    "@packages/config": "workspace:^",
     "@storybook/addon-actions": ">=7.0.0-alpha.48 <7.1.0",
     "@storybook/addon-docs": ">=7.0.0-alpha.48 <7.1.0",
     "@storybook/addon-essentials": ">=7.0.0-alpha.48 <7.1.0",
@@ -24,9 +25,7 @@
     "@storybook/react-vite": ">=7.0.0-alpha.48 <7.1.0",
     "@storybook/testing-library": ">=0.0.14-next <0.1.0",
     "@vitejs/plugin-react": "2.2.0",
-    "eslint-config-custom": "workspace:^",
     "serve": "^14.1.1",
-    "tsconfig": "workspace:^",
     "typescript": "4.8.4",
     "vite": "3.2.3"
   }

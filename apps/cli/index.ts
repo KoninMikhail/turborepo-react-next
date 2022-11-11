@@ -4,7 +4,7 @@ import * as packageJson from "./package.json"
 import chalk from "chalk"
 
 const sayHello = () => {
-  console.log(chalk.green("Hello World!"))
+  console.log(chalk.green("CLI says: Hello World!"))
 }
 
 const program = new Command()
