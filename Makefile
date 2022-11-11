@@ -1,5 +1,6 @@
 DCR=.devcontainer/run
 
+default: dev
 dev:
 	${DCR} up -d app
 	make open
@@ -17,6 +18,3 @@ open:
 sh: bash
 bash:
 	${DCR} bash
-
-cli:
-	.devcontainer/run supereffective-cli

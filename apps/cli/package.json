@@ -14,7 +14,7 @@
     "dev": "rm -rf dist && tsup index.ts --format=esm --watch --dts --external react"
   },
   "bin": {
-    "supereffective-cli": "./dist/index.mjs"
+    "app-cli": "./dist/index.mjs"
   },
   "devDependencies": {
     "@packages/config": "workspace:^",
