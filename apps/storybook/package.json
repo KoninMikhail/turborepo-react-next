@@ -1,5 +1,5 @@
 {
-  "name": "@app/storybook",
+  "name": "@apps/storybook",
   "version": "0.0.0",
   "private": true,
   "scripts": {
