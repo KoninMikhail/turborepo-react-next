@@ -1,6 +1,7 @@
 # Turborepo Starter
 
-Opinionated Turborepo template repository, based on the official Yarn (Berry) starter turborepo.
+Opinionated Turborepo template repository, based on the official Yarn (Berry) starter turborepo,
+created with testing, design systems, DDD and reactive programming in mind.
 
 Main tools, frameworks and libraries: Turbo, Yarn, TypeScript, ReactJS, NextJS, ESLint, Prettier, Jest, Storybook, Styled Components, tsup.
 

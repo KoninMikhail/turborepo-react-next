@@ -1,0 +1,9 @@
+public/**/* linguist-detectable=false
+data/**/* linguist-generated=true
+.storybook/**/*.js linguist-detectable=false
+*.html linguist-detectable=false
+*.config.js linguist-detectable=false
+*.setup.js linguist-detectable=false
+*.sh linguist-detectable=false
+Dockerfile linguist-detectable=false
+Makefile linguist-detectable=false
