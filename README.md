@@ -3,7 +3,7 @@
 Opinionated Turborepo template repository, based on the official Yarn (Berry) starter turborepo,
 created with testing, design systems, DDD and reactive programming in mind.
 
-Main tools, frameworks and libraries: Turbo, Yarn, TypeScript, ReactJS, NextJS, ESLint, Prettier, Jest, Storybook, Styled Components, tsup.
+Main tools, frameworks and libraries: Turbo, Yarn, TypeScript, ReactJS, NextJS, ESLint, Prettier, Husky, Jest, Storybook, Styled Components, tsup.
 
 ## Software Patterns and Principles
 
