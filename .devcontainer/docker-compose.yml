@@ -1,4 +1,4 @@
-version: "3.8"
+version: '3.8'
 volumes:
   yarn_cache:
 services:
@@ -13,18 +13,18 @@ services:
     volumes:
       # Uncomment the next line to use Docker from inside the container. See https://aka.ms/vscode-remote/samples/docker-from-docker-compose for details.
       - /var/run/docker.sock:/var/run/docker.sock
-      - "../:/usr/src/app:cached"
-      - "yarn_cache:/root/.cache/yarn:cached"
+      - '../:/usr/src/app:cached'
+      - 'yarn_cache:/root/.cache/yarn:cached'
   app:
     build:
       context: ../
       dockerfile: .devcontainer/Dockerfile
       target: base
     working_dir: /usr/src/app
-    command: ["yarn", "run", "dev"]
+    command: ['yarn', 'run', 'dev']
     ports:
-      - "4000:3000"
-      - "6006:6006"
+      - '3000:3000'
+      - '6006:6006'
     volumes:
-      - "../:/usr/src/app"
-      - "yarn_cache:/root/.cache/yarn"
+      - '../:/usr/src/app'
+      - 'yarn_cache:/root/.cache/yarn'
