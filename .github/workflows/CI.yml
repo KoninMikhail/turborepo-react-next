@@ -1,4 +1,4 @@
-name: "lint/build/test"
+name: 'lint/build/test'
 on:
   push:
     branches:
