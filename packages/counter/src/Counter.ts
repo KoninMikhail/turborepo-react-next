@@ -10,12 +10,10 @@ export interface Counter {
 
 // TODO: add tests
 export class InMemoryCounter implements Counter {
-  state: CounterState = {
-    count: 0,
-  }
+  state: CounterState
 
-  constructor(initialState: CounterState) {
-    this.state = initialState
+  constructor(state: CounterState) {
+    this.state = state
   }
 
   increment(): void {
