@@ -10,7 +10,10 @@ const resolve_module = (name, dir) => {
   }
 }
 
-const resolved_modules = [['@packages/ui', 'packages/ui']]
+const resolved_modules = [
+  ['@packages/ui', 'packages/ui'],
+  ['@packages/counter', 'packages/counter'],
+]
 
 module.exports = {
   stories: [

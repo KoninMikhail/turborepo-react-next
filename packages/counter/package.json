@@ -1,5 +1,5 @@
 {
-  "name": "@packages/ui",
+  "name": "@packages/counter",
   "version": "0.0.0",
   "private": true,
   "main": "./src/index.tsx",
@@ -25,6 +25,7 @@
     "@babel/preset-env": "^7.20.2",
     "@babel/preset-react": "^7.18.6",
     "@packages/config": "workspace:^",
+    "@packages/ui": "workspace:^",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@types/jest": "^29.2.2",

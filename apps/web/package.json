@@ -11,6 +11,7 @@
     "lint:ci": "next lint"
   },
   "dependencies": {
+    "@packages/counter": "workspace:^",
     "@packages/ui": "workspace:^",
     "next": "13.0.2",
     "react": "^18.2.0",

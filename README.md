@@ -28,6 +28,7 @@ This turborepo uses [Yarn](https://yarnpkg.com/) as a package manager. It includ
 - `apps/cli`: a [NodeJS](https://nodejs.org/) CLI app, written in TypeScript, with Chalk and Commander
 - `apps/storybook`: a [StoryBook](https://storybook.js.org/) design system app (v7 alpha), powered by Vite 3
 - `packages/ui`: a stub React v18 component library shared by both `web` and `storybook` applications, powered by `styled-components` and `tsup` (a `esbundle` based compiler).
+- `packages/counter`: Similar to the `ui` package, but showcases a stateful "counter" component and a minimalistic approach to reactive UIs combined with DDD.
 - `packages/config`: Shared configurations, including:
   - `eslint` configurations (includes `eslint-config-next`, `eslint-config-turbo` and `eslint-config-prettier`)
   - `tsconfig` TS config JSONs used throughout the monorepo

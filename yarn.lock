@@ -67,6 +67,7 @@ __metadata:
   dependencies:
     "@babel/core": ^7.20.2
     "@packages/config": "workspace:^"
+    "@packages/counter": "workspace:^"
     "@packages/ui": "workspace:^"
     "@types/node": ^18.11.9
     "@types/react": ^18.0.25
@@ -2350,6 +2351,32 @@ __metadata:
     eslint-config-prettier: 8.5.0
     eslint-config-turbo: latest
     eslint-plugin-react: 7.31.10
+    typescript: 4.8.4
+  languageName: unknown
+  linkType: soft
+
+"@packages/counter@workspace:^, @packages/counter@workspace:packages/counter":
+  version: 0.0.0-use.local
+  resolution: "@packages/counter@workspace:packages/counter"
+  dependencies:
+    "@babel/preset-env": ^7.20.2
+    "@babel/preset-react": ^7.18.6
+    "@packages/config": "workspace:^"
+    "@packages/ui": "workspace:^"
+    "@testing-library/jest-dom": ^5.16.5
+    "@testing-library/react": ^13.4.0
+    "@types/jest": ^29.2.2
+    "@types/react": 18.0.25
+    "@types/react-dom": 18.0.8
+    "@types/styled-components": ^5.1.26
+    babel-jest: ^29.3.1
+    babel-plugin-styled-components: ^2.0.7
+    jest: ^29.3.1
+    jest-environment-jsdom: ^29.3.1
+    react: 18.2.0
+    styled-components: ^5.3.6
+    ts-jest: ^29.0.3
+    tsup: 6.4.0
     typescript: 4.8.4
   languageName: unknown
   linkType: soft
