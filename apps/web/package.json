@@ -1,6 +1,6 @@
 {
   "name": "@apps/web",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -11,18 +11,19 @@
     "lint:ci": "next lint"
   },
   "dependencies": {
+    "@next/font": "^13.1.1",
     "@packages/counter": "workspace:^",
     "@packages/ui": "workspace:^",
-    "next": "13.0.2",
+    "next": "^13.1.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.20.2",
+    "@babel/core": "^7.20.7",
     "@packages/config": "workspace:^",
-    "@types/node": "^18.11.9",
-    "@types/react": "^18.0.25",
-    "@types/react-dom": "^18.0.8",
-    "typescript": "4.8.4"
+    "@types/node": "^18.11.18",
+    "@types/react": "^18.0.26",
+    "@types/react-dom": "^18.0.10",
+    "typescript": "^4.9.4"
   }
 }

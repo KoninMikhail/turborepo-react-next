@@ -3,7 +3,5 @@ module.exports = {
   compiler: {
     // styledComponents: true,
   },
-  experimental: {
-    transpilePackages: ['@packages/ui', '@packages/counter'],
-  },
+  transpilePackages: ['@packages/ui', '@packages/counter'],
 }

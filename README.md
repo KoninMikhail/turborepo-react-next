@@ -64,7 +64,7 @@ yarn run dev
 
 #### .devcontainer
 
-The `.devcontainer` folder offers a local Docker development environment for VS Code with the [Dev Containers](https://containers.dev/) extension, but you can also use it with other IDEs, via a command line, and the `.devcontainer/run` helper script, which wraps `docker-compose` commands.
+The `.devcontainer` folder offers a local Docker development environment for VS Code with the [Dev Containers](https://containers.dev/) extension. The script `.devcontainer/run` is a helper to run commands inside the container.
 
 You can also use `make` for simple tasks like: `dev`, `stop`, `install`, `open`, and `bash` inside the container.
 

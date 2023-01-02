@@ -1,0 +1,17 @@
+version: '3.8'
+volumes:
+  yarn_cache:
+services:
+  app:
+    build:
+      context: ./
+      dockerfile: .devcontainer/Dockerfile
+      target: app
+    working_dir: /usr/src/app
+    command: ['yarn', 'run', 'dev']
+    ports:
+      - '3000:3000'
+      - '6006:6006'
+    volumes:
+      - './:/usr/src/app'
+      - 'yarn_cache:/root/.cache/yarn'

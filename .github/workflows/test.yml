@@ -9,11 +9,11 @@ on:
       - develop
 jobs:
   build:
-    name: Unit tests
+    name: Lint, Build and Test
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        node: ['16', '18']
+        node: ['18']
     steps:
       - name: Checkout
         uses: actions/checkout@v2

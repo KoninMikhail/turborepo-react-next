@@ -3,6 +3,7 @@ DCR=.devcontainer/run
 default: dev
 dev:
 	${DCR} up -d app
+	sleep 1
 	make open
 
 stop:
@@ -18,3 +19,20 @@ open:
 sh: bash
 bash:
 	${DCR} app bash
+
+test:
+	${DCR} app yarn test
+
+build:
+	${DCR} app yarn build
+
+lint:
+	${DCR} app yarn lint
+
+pretty: format
+prettify: format
+format:
+	${DCR} app yarn format
+
+ci:
+	${DCR} app yarn ci

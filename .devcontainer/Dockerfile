@@ -1,16 +1,22 @@
-FROM node:18-bullseye as base
+ARG VARIANT=18-bullseye
+FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:${VARIANT} as base
+
+# -----
+
+FROM base as app
 
 ENV DEBIAN_FRONTEND noninteractive
 
 ENV NEXT_TELEMETRY_DISABLED 1
 ENV STORYBOOK_DISABLE_TELEMETRY 1
 
-ENV NODE_OPTIONS "--openssl-legacy-provider"
+# Uncomment for node 18, if you have openssl issues:
+# ENV NODE_OPTIONS "--openssl-legacy-provider"
 
 ENV HOME /root
 ENV YARN_CACHE_FOLDER /root/.cache/yarn
-ENV GIT_USER_NAME "Javi Aguilar"
-ENV GIT_USER_EMAIL "122741+itsjavi@users.noreply.github.com"
+ENV GIT_USER_NAME "docker"
+ENV GIT_USER_EMAIL "docker@localhost"
 
 # Ensure local binaries are preferred over distro ones
 ENV PATH /usr/src/app/node_modules/.bin:/usr/local/bin:$PATH
@@ -46,7 +52,7 @@ RUN mkdir ~/.ssh && \
     touch ~/.ssh_config && \
     mkdir -p ~/.ssh && ssh-keyscan -H github.com >>~/.ssh/known_hosts
 
-# Prepare package manager(s)
+# Prepare package manager(s) and other tools
 RUN npm install npm@latest -g && \
     npm install create-turbo -g
 
@@ -57,4 +63,5 @@ RUN corepack enable && \
 
 WORKDIR /usr/src/app
 EXPOSE 3000
-EXPOSE 6006
+
+# -----
