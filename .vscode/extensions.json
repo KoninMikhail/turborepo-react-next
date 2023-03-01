@@ -2,9 +2,18 @@
   "recommendations": [
     "esbenp.prettier-vscode",
     "dbaeumer.vscode-eslint",
+    "wix.vscode-import-cost",
+    "formulahendry.auto-rename-tag",
+    "unifiedjs.vscode-mdx",
+    "clinyong.vscode-css-modules",
+    "christian-kohler.path-intellisense",
     "VisualStudioExptTeam.vscodeintellicode",
     "VisualStudioExptTeam.vscodeintellicode-completions",
-    "VisualStudioExptTeam.intellicode-api-usage-examples"
+    "VisualStudioExptTeam.intellicode-api-usage-examples",
+    "prisma.prisma",
+    "eliostruyf.vscode-front-matter",
+    "hediet.vscode-drawio",
+    "pkief.material-icon-theme"
   ],
-  "unwantedRecommendations": []
+  "unwantedRecommendations": ["eamodio.gitlens"]
 }

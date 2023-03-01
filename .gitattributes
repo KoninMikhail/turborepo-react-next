@@ -1,15 +1,13 @@
 # config files (they will be ignored in language stats)
-*.js linguist-documentation
-*.ts linguist-documentation
-.devcontainer/** linguist-documentation
 **/*.config.js linguist-documentation
 **/*.setup.js linguist-documentation
 **/*rc.js linguist-documentation
 Dockerfile linguist-documentation
 Makefile linguist-documentation
 **/.storybook/* linguist-documentation
+
 .husky/** linguist-documentation
+.yarn/**/* linguist-generated=true
 
-public/**/* linguist-documentation
-data/**/* linguist-documentation
-
+public/**/* linguist-generated=true
+data/**/* linguist-generated=true

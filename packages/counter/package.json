@@ -28,17 +28,17 @@
     "@packages/ui": "workspace:^",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@types/jest": "^29.2.2",
-    "@types/react": "18.0.25",
-    "@types/react-dom": "18.0.8",
+    "@types/jest": "^29.4.0",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
     "@types/styled-components": "^5.1.26",
-    "babel-jest": "^29.3.1",
+    "babel-jest": "^29.4.3",
     "babel-plugin-styled-components": "^2.0.7",
-    "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1",
-    "react": "18.2.0",
-    "ts-jest": "^29.0.3",
-    "tsup": "6.4.0",
-    "typescript": "4.8.4"
+    "jest": "^29.4.3",
+    "jest-environment-jsdom": "^29.4.3",
+    "react": "^18.2.0",
+    "ts-jest": "^29.0.5",
+    "tsup": "^6.6.3",
+    "typescript": "^4.9.5"
   }
 }

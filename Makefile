@@ -1,16 +1,17 @@
-DCR=.devcontainer/run
+DC=docker-compose
 
 default: dev
 dev:
-	${DCR} up -d app
-	sleep 1
+	${DC} up -d
+	sleep 2
 	make open
 
 stop:
-	${DCR} stop
+	${DC} stop
 
 install:
-	${DCR} app yarn install
+	${DC} run --rm app yarn install
+	${DC} run --rm app yarn husky:install
 
 open:
 	open http://localhost:3000
@@ -18,21 +19,18 @@ open:
 
 sh: bash
 bash:
-	${DCR} app bash
-
-test:
-	${DCR} app yarn test
+	${DC} run --rm app bash
 
 build:
-	${DCR} app yarn build
+	${DC} run --rm app yarn build
+
+test:
+	${DC} run --rm app yarn test
 
 lint:
-	${DCR} app yarn lint
+	${DC} run --rm app yarn lint
 
 pretty: format
 prettify: format
 format:
-	${DCR} app yarn format
-
-ci:
-	${DCR} app yarn ci
+	${DC} run --rm app yarn format

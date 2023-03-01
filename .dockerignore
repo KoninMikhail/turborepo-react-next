@@ -8,3 +8,14 @@ build
 .turbo
 .idea
 data/
+apps/
+packages/
+.ignore/
+.local/
+
+*.zip
+*.png
+*.webp
+*.sqlite
+*.db
+*.tar.gz

@@ -47,6 +47,9 @@ module.exports = {
       resolve: {
         alias: resolved_modules.map((def) => resolve_module(def[0], def[1])),
       },
+      define: {
+        "process.env": {}
+      }
     }
   },
   docsPage: {
