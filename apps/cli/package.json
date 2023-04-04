@@ -5,10 +5,10 @@
   "main": "./index.ts",
   "types": "./index.ts",
   "scripts": {
-    "dev": "rm -rf dist && tsup index.ts --format=esm --watch --dts --external react",
-    "lint": "TIMING=1 eslint \"**/*.ts*\"",
+    "dev": "shx rm -rf dist && tsup index.ts --format=esm --watch --dts --external react",
+    "lint": "cross-env TIMING=1 eslint \"**/*.ts*\"",
     "lint:ci": "yarn run lint",
-    "build": "rm -rf dist && tsup index.ts --format=esm --dts --external react",
+    "build": "shx rm -rf dist && tsup index.ts --format=esm --dts --external react",
     "build:ci": "yarn run build"
   },
   "bin": {
@@ -21,6 +21,8 @@
   "devDependencies": {
     "@packages/config": "workspace:^",
     "@types/node": "^18.14.2",
+    "cross-env": "^7.0.3",
+    "shx": "^0.3.4",
     "tsup": "^6.6.3",
     "typescript": "^4.9.5"
   }
