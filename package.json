@@ -9,7 +9,7 @@
   "scripts": {
     "start": "turbo run build && turbo run start --no-cache --parallel --continue",
     "dev": "turbo run dev --no-cache --parallel --continue",
-    "lint": "TIMING=1 eslint \"**/*.{js,jsx,ts,tsx}\"",
+    "lint": "cross-env TIMING=1 eslint \"**/*.{js,jsx,ts,tsx}\"",
     "build": "turbo run build",
     "test": "turbo run test --concurrency=1",
     "format": "prettier --write \"**/*.{astro,js,jsx,ts,tsx,css,scss,md,mdx,yml,yaml,xml,toml,json}\"",
@@ -19,6 +19,7 @@
   },
   "devDependencies": {
     "@packages/config": "workspace:^",
+    "cross-env": "^7.0.3",
     "eslint": "^8.35.0",
     "husky": "^8.0.3",
     "prettier": "^2.8.4",
