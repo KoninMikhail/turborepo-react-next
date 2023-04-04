@@ -15,12 +15,9 @@ The project is a monorepo that comes with a series of examples that follow these
 - Reactive programming / Reactive UI using the observer pattern, which allows us to decouple the business logic and the
   state from the framework and UI components. Easier to test and more scalable.
 - Atomic Design
-- Domain-Driven Design (DDD) rather than framework-oriented separation of concerns.
-- Clean/Onion architecture. The main applications have a series of layers separating Business Logic (Domain and Use
-  Cases), Entry Points (aka. presentation layer), Infrastructure (providers, interface implementations, vendor
-  extensions, etc.) and Configuration (which wraps everything together).
+- Domain-Driven Design (DDD) & boundary contexts rather than framework-oriented separation of concerns. Instead of folder structures like "/components", "/state", etc. we will have a structure based on business domains, e.g. "/calculator".
 
-This project does not feature Micro Frontends / Module Federation, but it can be easily implemented.
+This project does not feature Micro Frontends / Module Federation, but they can be easily implemented thanks to NextJS's `transpilePackages` setting.
 
 ## What's inside?
 
